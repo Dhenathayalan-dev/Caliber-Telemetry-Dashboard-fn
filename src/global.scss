@@ -1,0 +1,391 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+}
+
+.app-layout {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.side-container {
+    background: linear-gradient(180deg, #1e293b, #0f172a);
+    position: relative;
+    height: 100vh;
+    margin-right:200px ;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #1e293b, #0f172a);
+    position: fixed;
+    height: 100vh;
+
+    .sidebar-user {
+        padding: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            color: #fff;
+
+            .ant-avatar {
+                background: #1890ff;
+            }
+
+            .user-name {
+                margin-left: 8px;
+                font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .logout-btn {
+            margin-top: 8px;
+            padding-left: 0;
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+            width: 100%;
+
+            &:hover {
+                color: #1890ff;
+                background: transparent;
+            }
+        }
+    }
+
+    .logo-container {
+        height: 64px;
+        margin: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo-img {
+        height: 32px;
+    }
+
+    .logo-text {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &.collapsed {
+        .logo-text {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+        }
+
+        .logo-container {
+
+            gap: 0;
+        }
+    }
+}
+
+.main-layout {
+    background-color: #f4f6f8;
+    // margin-left: 200px;
+}
+
+.content {
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.protect-container {
+    margin: 16px;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.user-add-button {
+    margin-bottom: 15px;
+}
+
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    background-image:
+        linear-gradient(rgba(15, 32, 39, 0.85), rgba(15, 32, 39, 0.85)),
+        url("/images/telemetry-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.login-left {
+    flex: 1;
+    padding: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+
+    background-image:
+        linear-gradient(rgba(15, 32, 39, 0.92), rgba(15, 32, 39, 0.92)),
+        url("src/assets/telematry-bg.webp");
+    background-size: cover;
+    background-position: center;
+
+    &__badge {
+        width: fit-content;
+        padding: 4px 10px;
+        margin-bottom: 14px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        border-radius: 4px;
+        color: #69c0ff;
+        background: rgba(24, 144, 255, 0.15);
+    }
+
+    &__title {
+        color: #fff !important;
+        margin-bottom: 16px !important;
+        line-height: 1.2;
+    }
+
+    &__description {
+        max-width: 420px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    &__features {
+        display: flex;
+        gap: 18px;
+        margin-top: 28px;
+        font-size: 14px;
+
+        span {
+            position: relative;
+            padding-left: 12px;
+
+            &::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: #69c0ff;
+            }
+        }
+    }
+}
+
+/* RIGHT PANEL */
+.login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+
+    &__title {
+        margin-bottom: 0 !important;
+    }
+
+    &__subtitle {
+        font-size: 13px;
+    }
+}
+
+.login-form {
+    margin-top: 24px;
+
+    &__submit {
+        margin-top: 24px;
+    }
+}
+
+.login-register {
+    margin-top: 16px;
+    text-align: center;
+
+    button {
+        padding-left: 6px;
+    }
+}
+
+
+
+
+//register page
+.register-page {
+    height: 100vh;
+    display: flex;
+    background-image:
+        linear-gradient(rgba(15, 32, 39, 0.85), rgba(15, 32, 39, 0.85)),
+        url("/src/assets/telematry-bg.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+/* LEFT PANEL */
+.register-left {
+    flex: 1;
+    padding: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+
+    background-image:
+        linear-gradient(rgba(15, 32, 39, 0.92), rgba(15, 32, 39, 0.92)),
+        url("../assets/telematry-bg.webp");
+    background-size: cover;
+    background-position: center;
+
+    &__badge {
+        width: fit-content;
+        padding: 4px 10px;
+        margin-bottom: 14px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        border-radius: 4px;
+        color: #73d13d;
+        background: rgba(82, 196, 26, 0.15);
+    }
+
+    &__title {
+        color: #fff !important;
+        margin-bottom: 16px !important;
+    }
+
+    &__description {
+        max-width: 420px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    &__features {
+        display: flex;
+        gap: 18px;
+        margin-top: 28px;
+        font-size: 14px;
+
+        span {
+            position: relative;
+            padding-left: 12px;
+
+            &::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: #73d13d;
+            }
+        }
+    }
+}
+
+/* RIGHT PANEL */
+.register-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-card {
+    width: 420px;
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+
+    &__title {
+        margin-bottom: 0 !important;
+    }
+
+    &__subtitle {
+        font-size: 13px;
+    }
+}
+
+.register-form {
+    margin-top: 24px;
+
+    &__submit {
+        margin-top: 24px;
+    }
+}
+
+.register-login {
+    margin-top: 16px;
+    text-align: center;
+
+    button {
+        padding-left: 6px;
+    }
+}
+
+/* src/styles/NotFound.scss */
+.not-found-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f2f5;
+    text-align: center;
+    padding: 20px;
+
+    .code {
+        font-size: 120px;
+        font-weight: bold;
+        color: #1890ff; // Primary Ant Design color
+        margin: 0;
+    }
+
+    .message {
+        font-size: 24px;
+        margin: 16px 0;
+        color: #555;
+    }
+
+    .description {
+        font-size: 16px;
+        color: #888;
+        margin-bottom: 24px;
+    }
+
+    .back-button {
+        background: #1890ff;
+        color: #fff;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background: #40a9ff;
+        }
+    }
+}
