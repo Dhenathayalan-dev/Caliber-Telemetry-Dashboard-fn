@@ -7,7 +7,7 @@ import LineChartBox from "../component/charts/LineChartBox";
 import { socket } from "../socket/socket";
 import WaterfallChartBox from "../component/charts/WaterfallChartBox";
 import AnnotationChartBox from "../component/charts/AnnotationChatBox";
-import AreaChartBox from "../component/charts/AreaChartBox";
+// import AreaChartBox from "../component/charts/AreaChartBox";
 import { paramsValues, telemetryType, type AreaChart, type MqttPayload, type TelemetryAction, type TelemetryStateActionType, type TelemetryType } from "../models/dashboard.model";
 import { useDateFunction } from "../util";
 import ChartSkeleton from "../component/charts/ChartSkeleton";
@@ -196,7 +196,8 @@ export default function TelemetryDashboard() {
         if (type === "bar") return <BarChartBox data={data.param2} />;
         if (type === "line") return <LineChartBox data={data.param3} />;
         if (type === "waterfall") return <WaterfallChartBox data={data.param4} />;
-        if (type === "area") return <AreaChartBox data={data.param5} />;
+        // if (type === "area") return <AreaChartBox data={data.param5} />;
+        if (type === "area") return <RadarChartBox data={data.param1} />;
         if (type === "annotation") return <AnnotationChartBox data={data.param6} />;
 
     };
